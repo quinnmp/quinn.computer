@@ -1,0 +1,23 @@
+body {
+    background-color: #1d2d44;
+}
+
+h1,
+p,
+a,
+button,
+.nav-link,
+.tab-pane {
+    color: #3e5c76;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #3e5c76;
+    color: #f0ebd8;
+}
+
+#main-col {
+    background-color: #f0ebd8;
+    border: solid #3e5c76 10px;
+    border-radius: 10px;
+}
