@@ -36,6 +36,12 @@ a:hover {
     text-align: start;
 }
 
+@media (max-width: 576px) {
+    .nav-link {
+        padding: 5px 3px;
+    }
+}
+
 .nav-link:hover {
     outline: solid #3e5c76 5px;
 }
