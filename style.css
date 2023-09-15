@@ -7,6 +7,11 @@ body {
     height: 600px;
 }
 
+.submit-btn {
+    border: solid #1d2d44 5px;
+    border-radius: 10px;
+}
+
 h1,
 p,
 a,
@@ -17,7 +22,12 @@ button,
     color: #3e5c76;
 }
 
-.nav-pills .nav-link.active {
+a:hover {
+    color: #1d2d44;
+}
+
+.nav-pills .nav-link.active,
+.submit-btn {
     background-color: #3e5c76;
     color: #f0ebd8;
 }
