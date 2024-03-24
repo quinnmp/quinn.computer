@@ -2,7 +2,10 @@ $(document).ready(function () {
     let pages = [
         "home",
         "academics",
-        "robotics",
+        "research",
+        "first",
+        "mars",
+        "rovs",
         "volunteering",
         "job",
         "skills",
@@ -39,7 +42,10 @@ $(document).ready(function () {
     });
 
     $(".nav-link").click(function () {
-        console.log("NAVLINK");
-        $("#main-img").attr("src", "images/" + $(this).attr("id") + ".jpg");
+        let id_string = $(this).attr("id");
+        let id = id_string.substring(8, id_string.length - 4);
+        if (id !== "robotics") {
+            $("#main-img").attr("src", "images/" + id + ".jpg");
+        }
     });
 });

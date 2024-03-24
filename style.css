@@ -18,8 +18,18 @@ a,
 button,
 .nav-link,
 .tab-pane,
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
     color: #3e5c76;
+}
+
+.accordion-item {
+    background-color: transparent;
+    border: none;
+}
+
+.accordion-body {
+    padding: 0 0 0 20px;
 }
 
 a:hover {
@@ -40,6 +50,10 @@ a:hover {
     .nav-link {
         padding: 5px 3px;
     }
+}
+
+.nav-link {
+    transition: outline 0.1s ease-in-out;
 }
 
 .nav-link:hover {
