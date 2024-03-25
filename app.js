@@ -18,6 +18,22 @@ $(document).ready(function () {
     function loadTextIntoDiv(filePath, divId) {
         $.get(filePath, function (data) {
             $(divId).html(data);
+            if (filePath == "pages/contact.html") {
+                $(".submit-btn").click(function () {
+                    console.log("Submit email");
+                    const firstName = $("#firstName").val();
+                    const lastName = $("#lastName").val();
+                    const subject = $("#subject").val();
+                    const message = $("#message").val();
+
+                    const mailtoLink = `mailto:quinnpfeifer@icloud.com?subject=${subject}&body=Name: ${
+                        firstName + " " + lastName
+                    }%0A${message}`;
+
+                    console.log(mailtoLink);
+                    window.location.href = mailtoLink;
+                });
+            }
         }).fail(function () {
             console.error("There was a problem fetching the file:", filePath);
         });
@@ -25,20 +41,6 @@ $(document).ready(function () {
 
     pages.forEach((page) => {
         loadTextIntoDiv(`pages/${page}.html`, `#v-pills-${page}`);
-    });
-
-    $(".submit-btn").click(function () {
-        const firstName = $("#firstName").val();
-        const lastName = $("#lastName").val();
-        const subject = $("#subject").val();
-        const message = $("#message").val();
-
-        const mailtoLink = `mailto:quinnpfeifer@icloud.com?subject=${subject}&body=Name: ${
-            firstName + " " + lastName
-        }%0A${message}`;
-
-        console.log(mailtoLink);
-        window.location.href = mailtoLink;
     });
 
     $(".nav-link").click(function () {
